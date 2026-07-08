@@ -1,7 +1,36 @@
-# Naive Bayes classifier for Fake News recognition
+# Naive Bayes Classifier for Fake News Recognition
 
-The idea of fake news is not a novel concept. Notably, the idea has been in existence even before the emergence of the Internet as publishers used false and misleading information to further their interests. Following the advent of the web, more and more consumers began forsaking the traditional media channels used to disseminate information for online platforms. They are everywhere in our daily life and come especially from social media platforms and applications in the online world. The fake news project aims to help news readers to identify bias and misinformation in news articles quickly and reliably.
+**Coursework project · Advanced Statistics for Physics Analysis · Physics of Data, University of Padova**
 
-In this project, we try to implement a Multinomial Naive Bayes classifier in R and test its performance in the classification of social media posts.
+## Overview
 
-Data is taken from Kaggle and it consists of a training set with 10,240 instances and a test set with 1,267 instances.
+Fake news and misinformation spread readily through social media, often mixing subtly with
+legitimate content. This project builds a Multinomial Naive Bayes classifier in R to
+automatically flag likely misinformation in social media posts, and evaluates it rigorously
+against tuned baselines.
+
+## Data
+
+Kaggle fake-news dataset: 10,240 labeled training instances and 1,267 test instances of
+social media/news text.
+
+## Method
+
+- Text preprocessing and document-term matrix construction (`CorpusToDtm`)
+- **Multinomial Naive Bayes** implemented with the `e1071` R package
+- Train/test split with stratification on class labels
+- Hyperparameter tuning via grid search (binomial and multinomial variants compared)
+- Evaluation on accuracy and computation time across configurations
+
+## Technical skills
+
+| Area | Details |
+|---|---|
+| NLP | Text preprocessing, document-term matrices, corpus construction |
+| Machine learning | Multinomial Naive Bayes, grid search, cross-validation |
+| R | `e1071`, statistical modeling, data wrangling |
+
+## Repository note
+
+Coursework project for the "Advanced Statistics for Physics Analysis" module, Physics of
+Data Master's degree, University of Padova.
